@@ -4,10 +4,10 @@ import {
   selectFetchStatusPubs,
   selectGridColumns,
   selectGridRows,
-} from "../../../frontpage/ListOfReadPublications/ListOfReadPublicationsSlice";
-import { DataGrid } from "@material-ui/data-grid";
+} from "../../../lib/redux/slices/ListOfReadPublicationsSlice/ListOfReadPublicationsSlice";
+import { DataGrid } from "@mui/x-data-grid";
 import React, { useEffect } from "react";
-import { store } from "../../../../app/store";
+import { store } from "../../../lib/redux/store";
 import { useStyles } from "./styles";
 
 export interface ReadPublicationsSectionProps {}
@@ -21,13 +21,13 @@ export function ReadPublicationsSection(props: ReadPublicationsSectionProps) {
 
   const fetchStatus = useAppSelector(selectFetchStatusPubs);
 
-  useEffect(() => {
-    if (fetchStatus === "idle") {
-      store.dispatch<any>(fetchPublications()).then(() => {
-        console.log("Fetched all events.");
-      });
-    }
-  }, [fetchStatus, dispatch]);
+  // useEffect(() => {
+  //   if (fetchStatus === "idle") {
+  //     // store.dispatch<any>(fetchPublications()).then(() => {
+  //     //   console.log("Fetched all events.");
+  //     // });
+  //   }
+  // }, [fetchStatus, dispatch]);
 
   return (
     <div className={classes.divStyle}>

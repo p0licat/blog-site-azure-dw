@@ -59,8 +59,10 @@ export const Counter = () => {
           headerVariant="h5"
           detailText={""}
         />
-        {/* <ReadPublicationsSection /> */}
-        <Typography variant="h5">CV</Typography>
+        <ReadPublicationsSection />
+        <Typography variant="h5" style={{ textAlign: "center" }}>
+          CV
+        </Typography>
         <TimelineSection />
       </ThemeProvider>
     </div>

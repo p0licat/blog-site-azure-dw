@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { RootState } from "../../store";
 import { PersonalEvent } from "./types";
+import { staticEvents } from "./static_data";
 
 enum RequestState {
   NotStarted,
@@ -20,26 +21,7 @@ export interface CounterState {
 const initialState: CounterState = {
   fetchItemsStatus: "idle",
   fetchItemsStatusType: RequestState.NotStarted,
-  eventList: [
-    {
-      key: 0,
-      id: 0,
-      description: "Sample event.",
-      date: new Date(Date.now()),
-    },
-    {
-      key: 1,
-      id: 1,
-      description: "Sample event.",
-      date: new Date(Date.now()),
-    },
-    {
-      key: 2,
-      id: 2,
-      description: "Sample event.",
-      date: new Date(Date.now()),
-    },
-  ],
+  eventList: staticEvents,
 };
 
 export interface IBackendEvent {

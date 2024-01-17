@@ -9,7 +9,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   timelineRoot: {
     minWidth: 1200,
-    overflow: "scroll",
+    //overflow: "scroll",
   },
   divRoot: {
     width: "90%",

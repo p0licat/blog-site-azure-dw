@@ -18,13 +18,13 @@ export function ListOfEvents(props: ListOfEventsProps) {
   const storeEvents = useAppSelector(selectListOfEvents);
   const fetchStatus = useAppSelector(selectFetchStatus);
 
-  useEffect(() => {
-    if (fetchStatus === "idle") {
-      store.dispatch<any>(fetchItems()).then(() => {
-        console.log("Fetched all events.");
-      });
-    }
-  }, [fetchStatus, dispatch]);
+  // useEffect(() => {
+  //   if (fetchStatus === "idle") {
+  //     store.dispatch<any>(fetchItems()).then(() => {
+  //       console.log("Fetched all events.");
+  //     });
+  //   }
+  // }, [fetchStatus, dispatch]);
 
   return (
     <div className={classes.divStyle}>

@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: theme.palette.background.paper,
       position: "relative",
       overflow: "auto",
-      maxHeight: 400,
+      maxHeight: 200,
       margin: "auto",
     },
     divStyle: {
