@@ -26,6 +26,14 @@ export const Nav = () => {
       >
         Verify
       </Link>
+      <Link
+        className={`${styles.link} ${
+          pathname === "/twitter" ? styles.active : ""
+        }`}
+        href="/twitter"
+      >
+        Twitter
+      </Link>
     </nav>
   );
 };

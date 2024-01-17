@@ -28,11 +28,13 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import listOfEventsSlice from "../redux/slices/ListOfEventsSlice/ListOfEventsSlice";
 import thunk from "redux-thunk";
 import ListOfReadPublicationsSlice from "./slices/ListOfReadPublicationsSlice/ListOfReadPublicationsSlice";
+import TwitterDataStoreSlice from "./slices/TwitterDataStoreSlice/TwitterDataStoreSlice";
 
 export const combinedstore = combineReducers({
   counter: counterSlice,
   listOfEventsReducer: listOfEventsSlice,
-  listOfReadPublicationsReducer: ListOfReadPublicationsSlice
+  listOfReadPublicationsReducer: ListOfReadPublicationsSlice,
+  twitterDataStoreReducer: TwitterDataStoreSlice
 });
 
 export const store = createStore(
