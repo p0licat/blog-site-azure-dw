@@ -4,7 +4,9 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 /* Instruments */
 import {
   ElementsJSON,
+  FullTweet,
   LoggedEvent,
+  PairedTweet,
   ResponseDTO,
   TextForTweet,
   TextForTweetDTO,
@@ -15,11 +17,11 @@ import {
   fetchGraphDataAsync,
   incrementAsync,
   queryTweetTextForSingleId,
-  refreshPoints,
   fetchGraphDataFromTextAsync,
-  fetchGraphDataFromAudioAsync,
 } from "./thunks";
 import { listOfEventsSlice } from "../ListOfEventsSlice/ListOfEventsSlice";
+import { tweetData } from "./data_store";
+import { pairingData } from "./pairing_data_store";
 
 const initialState: TwitterDataStoreSliceState = {
   value: 0,
@@ -33,6 +35,8 @@ const initialState: TwitterDataStoreSliceState = {
   logData: ["Application store loaded. Log component loaded."],
   lastEvent: 0, // this is the timestamp of the last event's originator, in a reactive store lifecycle
   points: "",
+  globalStore: tweetData,
+  globalPairings: pairingData,
 };
 
 export const twitterDataStoreSlice = createSlice({
@@ -77,9 +81,37 @@ export const twitterDataStoreSlice = createSlice({
         state.status = "idle";
         state.value += action.payload;
       })
-      .addCase(fetchGraphDataAsync.fulfilled, (state, action) => {
-        state.fullData = action.payload;
-        state.elementsData = action.payload.elements;
+      // .addCase(fetchGraphDataAsync.fulfilled, (state, action) => {
+      //   state.fullData = action.payload;
+      //   state.elementsData = action.payload.elements;
+      //   action.payload.elements.edges.forEach((edge: any) => {
+      //     var newEdge: UsableEdge = {
+      //       data: { id: "", label: "", source: "", target: "" },
+      //     };
+      //     newEdge.data.source = edge.data.source;
+      //     newEdge.data.target = edge.data.target;
+      //     newEdge.data.label = "EdgeLabel";
+      //     newEdge.data.id = "";
+      //     state.alternativeEdges.push({
+      //       data: {
+      //         id: edge.data.source + edge.data.target,
+      //         source: edge.data.source,
+      //         target: edge.data.target,
+      //       },
+      //     });
+      //   });
+      //   action.payload.elements.nodes.forEach((node: any) => {
+      //     var newNode: UsableNodeData = { data: { id: "", label: "" } };
+      //     newNode.data.id = node.data.id;
+      //     newNode.data.label = node.data.name;
+      //     state.alternativeNodes.push(newNode);
+      //   });
+      // })
+      .addCase(fetchGraphDataFromTextAsync.fulfilled, (state, action) => {
+        state.fullData = action.payload; // todo: wip: reviewing DAO
+        console.log("Printing payload...");
+        console.log(action.payload);
+        console.log(action.payload.elements.edges);
         action.payload.elements.edges.forEach((edge: any) => {
           var newEdge: UsableEdge = {
             data: { id: "", label: "", source: "", target: "" },
@@ -96,6 +128,7 @@ export const twitterDataStoreSlice = createSlice({
             },
           });
         });
+
         action.payload.elements.nodes.forEach((node: any) => {
           var newNode: UsableNodeData = { data: { id: "", label: "" } };
           newNode.data.id = node.data.id;
@@ -103,74 +136,16 @@ export const twitterDataStoreSlice = createSlice({
           state.alternativeNodes.push(newNode);
         });
       })
-      .addCase(fetchGraphDataFromAudioAsync.fulfilled, (state, action) => {
-        state.fullData = action.payload;
-
-        action.payload.nodes.forEach((node: any) => {
-          var newNode: UsableNodeData = { data: { id: "", label: "" } };
-          newNode.data.id = node.data.id;
-          newNode.data.label = node.data.name;
-          state.alternativeNodes.push(newNode);
-        });
-
-        action.payload.edges.forEach((edge: any) => {
-          var newEdge: UsableEdge = {
-            data: { id: "", label: "", source: "", target: "" },
-          };
-          newEdge.data.source = edge.data.source;
-          newEdge.data.target = edge.data.target;
-          newEdge.data.label = "EdgeLabel";
-          newEdge.data.id = "";
-          state.alternativeEdges.push({
-            data: {
-              id: edge.data.source + edge.data.target,
-              source: edge.data.source,
-              target: edge.data.target,
-            },
-          });
-        });
-      })
-      .addCase(fetchGraphDataFromTextAsync.fulfilled, (state, action) => {
-        state.fullData = action.payload;
-        console.log("Printing payload...");
-        console.log(action.payload);
-        console.log(action.payload.edges);
-        action.payload.edges.forEach((edgeList: any) => {
-          edgeList.forEach((edge: any) => {
-            var newEdge: UsableEdge = {
-              data: { id: "", label: "", source: "", target: "" },
-            };
-            newEdge.data.source = edge.data.source;
-            newEdge.data.target = edge.data.target;
-            newEdge.data.label = "EdgeLabel";
-            newEdge.data.id = "";
-            state.alternativeEdges.push({
-              data: {
-                id: edge.data.source + edge.data.target,
-                source: edge.data.source,
-                target: edge.data.target,
-              },
-            });
-          });
-        });
-
-        action.payload.nodes.forEach((nodeList: any) => {
-          nodeList.forEach((node: any) => {
-            var newNode: UsableNodeData = { data: { id: "", label: "" } };
-            newNode.data.id = node.data.id;
-            newNode.data.label = node.data.name;
-            state.alternativeNodes.push(newNode);
-          });
-        });
-      })
       .addCase(queryTweetTextForSingleId.fulfilled, (state, action) => {
-        let bb: TextForTweetDTO = action.payload;
+        let bb: TextForTweetDTO;
+        if (action.payload != false) {
+          bb = action.payload;
+        } else {
+          return;
+        }
+
         let cc: TextForTweet = bb as TextForTweet;
         state.tweetsWithText.push(cc);
-      })
-      .addCase(refreshPoints.fulfilled, (state, action) => {
-        let numPoints: string = action.payload.points[0];
-        state.points = numPoints;
       });
   },
 });
@@ -191,4 +166,6 @@ export interface TwitterDataStoreSliceState {
   logData: Array<string>;
   lastEvent: number;
   points: string;
+  globalStore: Array<FullTweet>;
+  globalPairings: Array<PairedTweet>;
 }

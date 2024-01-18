@@ -5,6 +5,21 @@ export interface NodeData {
   name: string;
 }
 
+export interface PairedTweet {
+  id: number;
+  key: string;
+  score: number;
+  tweetId1: string;
+  tweetId2: string;
+}
+
+export interface FullTweet {
+  tweetId: string;
+  fullText: string;
+  embedding: Array<number>;
+  expandedUrl: string;
+}
+
 export interface UsableNodeData {
   data: {
     id: string;
