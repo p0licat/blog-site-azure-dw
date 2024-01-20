@@ -20,7 +20,7 @@ export const Counter = () => {
   const [incrementAmount, setIncrementAmount] = useState(2);
 
   return (
-    <div>
+    <div style={{ maxWidth: "100vw" }}>
       <ThemeProvider theme={theme}>
         <TextDetailsSection
           headerText={"Presentation"}

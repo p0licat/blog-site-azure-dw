@@ -11,7 +11,7 @@ export const personalTheme = () => {
   theme.typography.h3 = {
     fontSize: "1.2rem",
     fontFamily: "'Ubuntu Mono', monospace",
-    "@media (min-width:600px)": {
+    "@media (min-width:300px)": {
       fontSize: "1.5rem",
       fontFamily: "'Ubuntu Mono', monospace",
     },
@@ -24,7 +24,7 @@ export const personalTheme = () => {
   theme.typography.h5 = {
     fontSize: "1.2rem",
     fontFamily: "'Ubuntu Mono', monospace",
-    "@media (min-width:600px)": {
+    "@media (min-width:300px)": {
       fontSize: "1.5rem",
       fontFamily: "'Ubuntu Mono', monospace",
     },
@@ -37,7 +37,7 @@ export const personalTheme = () => {
   theme.typography.h6 = {
     fontSize: "1.2rem",
     fontFamily: "'Ubuntu Mono', monospace",
-    "@media (min-width:600px)": {
+    "@media (min-width:300px)": {
       fontSize: "1.5rem",
       fontFamily: "'Ubuntu Mono', monospace",
     },
@@ -50,7 +50,7 @@ export const personalTheme = () => {
   theme.typography.h4 = {
     fontSize: "1.2rem",
     fontFamily: "'Ubuntu Mono', monospace",
-    "@media (min-width:600px)": {
+    "@media (min-width:300px)": {
       fontSize: "1.5rem",
       fontFamily: "'Ubuntu Mono', monospace",
     },

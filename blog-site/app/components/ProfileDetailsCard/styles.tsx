@@ -4,11 +4,11 @@ export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     cardStyle: {
       marginTop: 15,
-      maxWidth: "50%",
+      maxWidth: "40vw",
       margin: "auto",
     },
     iconListStyle: {
-      width: "100%",
+      width: "90vw",
       maxWidth: 360,
       minWidth: "50%",
       height: "80px",

@@ -26,7 +26,9 @@ export function ProfileDetailsCard(props: ProfileDetailsCardProps) {
     <Card className={classes.cardStyle}>
       <Grid container>
         <Grid item xs={4}>
-          <Card style={{ border: "none", boxShadow: "none" }}>
+          <Card
+            style={{ border: "none", boxShadow: "none", overflow: "overlay" }}
+          >
             <img
               src={"/static/Profile2.jpg"}
               alt={"My avatar"}
@@ -36,14 +38,14 @@ export function ProfileDetailsCard(props: ProfileDetailsCardProps) {
         </Grid>
         <Grid item xs={8}>
           <Card
-            style={{ border: "none", boxShadow: "none", overflow: "scroll" }}
+            style={{ border: "none", boxShadow: "none", overflow: "overlay" }}
           >
             <Typography variant="h4">{props.fullName}</Typography>
             <Typography variant="h6">{props.fullTitle}</Typography>
             <Typography variant="h6">{props.fullLocation}</Typography>
             <Typography variant="h6">{props.fullEmail}</Typography>
             <Card
-              style={{ border: "none", boxShadow: "none", overflow: "visible" }}
+              style={{ border: "none", boxShadow: "none", overflow: "overlay" }}
             >
               <List className={classes.iconListStyle}>
                 <ListItem>

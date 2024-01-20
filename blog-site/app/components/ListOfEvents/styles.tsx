@@ -9,12 +9,14 @@ export const useStyles = makeStyles((theme: Theme) =>
       overflow: "auto",
       maxHeight: 200,
       margin: "auto",
+      display: "flex",
+      flexDirection: "column-reverse",
     },
     divStyle: {
       marginTop: 15,
     },
     typography: {
-      fontSize: 14,
+      fontSize: 8,
       fontFamily: "'Ubuntu Mono', monospace",
     },
   })
