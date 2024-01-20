@@ -28,7 +28,7 @@ export const staticPubs: IPublicationEntry[] = [
   {
     key: 4,
     id: 4,
-    Tags: "Science, Machine Learning, Biomimicry",
+    Tags: "Science, Machine Learning, Biomimicry 🧬",
     Date: new Date(2024, 1, 10),
     Title:
       "BioBERT: a pre-trained biomedical language representation model for biomedical text mining",

@@ -7,6 +7,9 @@ export const useStyles = makeStyles((theme) => ({
   secondaryTail: {
     backgroundColor: theme.palette.secondary.main,
   },
+  primaryTail: {
+    backgroundColor: theme.palette.primary.main,
+  },
   timelineRoot: {
     minWidth: 1200,
     //overflow: "scroll",

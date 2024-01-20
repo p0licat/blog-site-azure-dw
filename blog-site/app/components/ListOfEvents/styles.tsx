@@ -16,7 +16,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       marginTop: 15,
     },
     typography: {
-      fontSize: 8,
+      fontSize: "0.7rem",
       fontFamily: "'Ubuntu Mono', monospace",
     },
   })

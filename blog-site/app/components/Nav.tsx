@@ -20,19 +20,19 @@ export const Nav = () => {
       </Link>
       <Link
         className={`${styles.link} ${
-          pathname === "/verify" ? styles.active : ""
-        }`}
-        href="/verify"
-      >
-        Verify
-      </Link>
-      <Link
-        className={`${styles.link} ${
           pathname === "/twitter" ? styles.active : ""
         }`}
         href="/twitter"
       >
         Twitter
+      </Link>
+      <Link
+        className={`${styles.link} ${
+          pathname === "/about" ? styles.active : ""
+        }`}
+        href="/about"
+      >
+        About
       </Link>
     </nav>
   );

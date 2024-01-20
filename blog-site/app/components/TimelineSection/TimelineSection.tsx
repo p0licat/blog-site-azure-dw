@@ -12,6 +12,7 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import WorkIcon from "@mui/icons-material/Work";
 import React from "react";
 import { useStyles } from "./styles";
 
@@ -38,13 +39,9 @@ export function TimelineSection(props: TimelineSectionProps) {
           <TimelineContent>
             <Paper elevation={3} className={classes.paper}>
               <Typography variant="h6" component="h1">
-                COMPUTER SCIENCE, BABEȘ-BOLYAI UNIVERSITY, Cluj-Napoca, Romania
+                BABEȘ-BOLYAI UNIVERSITY, Cluj-Napoca, Romania
               </Typography>
-              <Typography>
-                Started for the second time university. Re-taking some courses,
-                which I find more interesting the second time, like
-                computational logic.
-              </Typography>
+              <Typography>Started my studentship.</Typography>
             </Paper>
           </TimelineContent>
         </TimelineItem>
@@ -63,13 +60,12 @@ export function TimelineSection(props: TimelineSectionProps) {
           <TimelineContent>
             <Paper elevation={3} className={classes.paper}>
               <Typography variant="h6" component="h1">
-                SYSTEMS ADMINISTRATOR – DTIC - BABEȘ-BOLYAI UNIVERSITY
+                IT ASSISTANT, BABEȘ-BOLYAI UNIVERSITY, Cluj-Napoca, Romania
               </Typography>
               <Typography>
-                Part of a team responsible with maintaining computer systems and
-                network functionality across multiple universityowned buildings.
-                The network topology was complex, and issues were common due to
-                the uptime of some old university hardware.
+                During my studentship I worked part time as a system
+                administrator helper at DTIC, a department at the university
+                which manages all network and ICT infrastructure.
               </Typography>
             </Paper>
           </TimelineContent>
@@ -77,7 +73,7 @@ export function TimelineSection(props: TimelineSectionProps) {
         <TimelineItem>
           <TimelineOppositeContent>
             <Typography variant="body2" color="textSecondary">
-              07/2017 – 09/2017 – Cluj-Napoca, Romania
+              07/2017 – 09/2017 (3 months) – Cluj-Napoca, Romania
             </Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
@@ -95,7 +91,6 @@ export function TimelineSection(props: TimelineSectionProps) {
                 Internship as a junior software engineer, with a focus on low
                 level programming(C/C++, x86 ASM), python, malware analysis and
                 reverse engineering, virtual machine security, network security.
-                Stopped early due to health 🚑 issues.
               </Typography>
             </Paper>
           </TimelineContent>
@@ -103,7 +98,7 @@ export function TimelineSection(props: TimelineSectionProps) {
         <TimelineItem>
           <TimelineOppositeContent>
             <Typography variant="body2" color="textSecondary">
-              07/2019 – 04/2020 – Bistrița, Romania
+              07/2019 – 04/2020 (11 months undergraduate) – Bistrița, Romania
             </Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
@@ -126,7 +121,7 @@ export function TimelineSection(props: TimelineSectionProps) {
                 remotely on Coursera. Managed a repository consisting of Jupyter
                 notebooks and other self-made network solutions. Developed an
                 embedded solution to expand my electronics knowledge while
-                focusing on software and data science
+                focusing on software and data science.
                 (https://gitlab.com/tbodica/battery-tester)
               </Typography>
             </Paper>
@@ -135,7 +130,31 @@ export function TimelineSection(props: TimelineSectionProps) {
         <TimelineItem>
           <TimelineOppositeContent>
             <Typography variant="body2" color="textSecondary">
-              01/10/2020 – 01/07/2022 – Cluj-Napoca, Romania
+              01/06/2021 – 01/09/2021 (3 months) – Cluj-Napoca, Romania
+            </Typography>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="secondary">
+              <WorkIcon />
+            </TimelineDot>
+            <TimelineConnector className={classes.secondaryTail} />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Paper elevation={3} className={classes.paper}>
+              <Typography variant="h6" component="h1">
+                Apprenticeship, YEAR 2 – Universitatea Babeș-Bolyai
+              </Typography>
+              <Typography>
+                Full Stack developer apprenticeship for 3 months in React, .NET
+                and Azure.
+              </Typography>
+            </Paper>
+          </TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography variant="body2" color="textSecondary">
+              02/10/2021 – Cluj-Napoca, Romania
             </Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
@@ -157,22 +176,68 @@ export function TimelineSection(props: TimelineSectionProps) {
         <TimelineItem>
           <TimelineOppositeContent>
             <Typography variant="body2" color="textSecondary">
-              01/10/2022 – Cluj-Napoca, Romania
+              06/2022 – Cluj-Napoca, Romania
             </Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot color="secondary">
               <FunctionsIcon />
             </TimelineDot>
+            <TimelineConnector className={classes.primaryTail} />
           </TimelineSeparator>
           <TimelineContent>
             <Paper elevation={3} className={classes.paper}>
               <Typography variant="h6" component="h1">
-                BACHELOR OF COMPUTER SCIENCE, YEAR 3 – Universitatea
-                Babeș-Bolyai
+                BACHELOR OF COMPUTER SCIENCE - Universitatea Babeș-Bolyai
+              </Typography>
+              <Typography>Graduated with grade 8.41 on final exams.</Typography>
+            </Paper>
+          </TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography variant="body2" color="textSecondary">
+              09/2022 (3 months) – Cluj-Napoca, Romania
+            </Typography>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="primary">
+              <WorkIcon />
+            </TimelineDot>
+            <TimelineConnector className={classes.primaryTail} />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Paper elevation={3} className={classes.paper}>
+              <Typography variant="h6" component="h1">
+                Java Developer Bootcamp - IBM Romania
               </Typography>
               <Typography>
-                Will get used to redacting academic papers.
+                Studied Java Spring, got Azure certified (AZ-900), and
+                comprehensively prepared on Java language building blocks using
+                the OCP-17 framework.
+              </Typography>
+            </Paper>
+          </TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent>
+            <Typography variant="body2" color="textSecondary">
+              03/2023 (4 months) – Luxembourg
+            </Typography>
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot color="primary">
+              <WorkIcon />
+            </TimelineDot>
+          </TimelineSeparator>
+          <TimelineContent>
+            <Paper elevation={3} className={classes.paper}>
+              <Typography variant="h6" component="h1">
+                Trainee - European Investment Bank, Luxembourg
+              </Typography>
+              <Typography>
+                Was part of a Python web application development project which
+                had data visualization using Plotly and Dash.
               </Typography>
             </Paper>
           </TimelineContent>
