@@ -46,7 +46,7 @@ export function TextDetailsSection(props: TextDetailsSectionProps) {
       </Button>
       <Typography variant={props.headerVariant}>{props.headerText}</Typography>
       <Typography variant="body1">{props.detailText}</Typography>
-      <Divider />
+      {/* <Divider /> */}
       <Modal
         open={open}
         onClose={handleClose}

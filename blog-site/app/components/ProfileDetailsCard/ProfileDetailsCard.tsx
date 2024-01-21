@@ -11,6 +11,8 @@ import {
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHub from "@mui/icons-material/GitHub";
+import YouTube from "@mui/icons-material/YouTube";
+import CastForEducationIcon from "@mui/icons-material/CastForEducation";
 import { useStyles } from "./styles";
 
 export interface ProfileDetailsCardProps {
@@ -60,6 +62,16 @@ export function ProfileDetailsCard(props: ProfileDetailsCardProps) {
                     <ListItemIcon>
                       <LinkedInIcon />
                     </ListItemIcon>
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link href="http://www.youtube.com/@septimiubodica">
+                    <YouTube></YouTube>
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link href="https://www.credly.com/users/septimiu-bodica/badges">
+                    <CastForEducationIcon />
                   </Link>
                 </ListItem>
                 <ListItem>

@@ -23,7 +23,7 @@ export default function RootLayout(props: React.PropsWithChildren) {
               <main className={styles.main}>{props.children}</main>
 
               <footer className={styles.footer}>
-                <span>Learn </span>
+                {/* <span>Learn </span>
                 <a
                   className={styles.link}
                   href="https://reactjs.org/"
@@ -58,7 +58,7 @@ export default function RootLayout(props: React.PropsWithChildren) {
                   rel="noopener noreferrer"
                 >
                   React Redux
-                </a>
+                </a> */}
               </footer>
             </section>
           </AppRouterCacheProvider>
