@@ -15,6 +15,8 @@ import YouTube from "@mui/icons-material/YouTube";
 import CastForEducationIcon from "@mui/icons-material/CastForEducation";
 import { useStyles } from "./styles";
 
+import { motion } from "framer-motion";
+
 export interface ProfileDetailsCardProps {
   fullName: string;
   fullTitle: string;
@@ -28,15 +30,17 @@ export function ProfileDetailsCard(props: ProfileDetailsCardProps) {
     <Card className={classes.cardStyle}>
       <Grid container>
         <Grid item xs={4}>
-          <Card
-            style={{ border: "none", boxShadow: "none", overflow: "overlay" }}
-          >
-            <img
-              src={"/static/Profile2.jpg"}
-              alt={"My avatar"}
-              className={classes.profilePic}
-            ></img>
-          </Card>
+          <motion.div>
+            <Card
+              style={{ border: "none", boxShadow: "none", overflow: "overlay" }}
+            >
+              <img
+                src={"/static/Profile2.jpg"}
+                alt={"My avatar"}
+                className={classes.profilePic}
+              ></img>
+            </Card>
+          </motion.div>
         </Grid>
         <Grid item xs={8}>
           <Card

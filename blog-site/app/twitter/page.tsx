@@ -25,7 +25,9 @@ export default function VerifyPage() {
       <TextDetailsSection
         headerText={"Twitter Likes visualization 1"}
         headerVariant="h5"
-        detailText={""}
+        detailText={
+          "Note that data is incomplete. I am using a subset of likes."
+        }
         modalTitle="Details"
         modalText="My twitter likes are clustered in this 3d projection. Try to drag it around. It is build with Plotly, and uses some artificial intelligence techniques."
       />

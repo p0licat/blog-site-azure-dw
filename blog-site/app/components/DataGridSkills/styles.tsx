@@ -4,7 +4,7 @@ export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       marginTop: 30,
-      width: "80%",
+      width: "80vw",
       backgroundColor: theme.palette.background.paper,
       position: "relative",
       overflow: "hidden",
@@ -13,7 +13,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     root2: {
       marginTop: 30,
-      width: "100%",
+      width: "100vw",
       backgroundColor: theme.palette.background.paper,
       position: "relative",
       overflow: "hidden",
