@@ -5,14 +5,14 @@ import { Nav } from "./components/Nav";
 /* Instruments */
 import styles from "./styles/layout.module.css";
 import "./styles/globals.css";
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 
 export default function RootLayout(props: React.PropsWithChildren) {
   return (
     <Providers>
       <html lang="en">
         <body>
-          <AppRouterCacheProvider options={{ enableCssLayer: false }}>
+          <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <section className={styles.container}>
               <Nav />
               {/* 

@@ -38,7 +38,7 @@ export function ProfileDetailsCard(props: ProfileDetailsCardProps) {
               style={{ border: "none", boxShadow: "none", overflow: "overlay" }}
             >
               <img
-                src={"/static/Profile4.jpg"}
+                src={"/static/profile4.jpg"}
                 alt={"My avatar"}
                 className={classes.profilePic}
               ></img>
