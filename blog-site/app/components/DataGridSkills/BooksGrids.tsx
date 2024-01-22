@@ -24,14 +24,14 @@ export const BooksGrids = () => {
     <div>
       <div style={{ height: 600, width: "100%" }}>
         <div style={{ height: 600, width: "100%" }}>
-          <div style={{ maxWidth: "1300px" }}>
-            <TextDetailsSection
-              headerText={"Books log"}
-              headerVariant="h5"
-              detailText={"Mot relevant books. Note that list is incomplete."}
-              modalTitle="Details"
-              modalText="Books that I solicited or borrowed at various libraries. Reading is one of my favourite activities. The relevance score is calculated based on the relevant skills from my educations that it refers to, my work experience and more."
-            />
+          <TextDetailsSection
+            headerText={"Books log"}
+            headerVariant="h5"
+            detailText={"Mot relevant books. Note that list is incomplete."}
+            modalTitle="Details"
+            modalText="Books that I solicited or borrowed at various libraries. Reading is one of my favourite activities. The relevance score is calculated based on the relevant skills from my educations that it refers to, my work experience and more."
+          />
+          <div style={{ maxWidth: "1300px", alignContent: "center" }}>
             <DataGrid
               className={classes.root2}
               rows={relativeSelectorRowsBooks()}

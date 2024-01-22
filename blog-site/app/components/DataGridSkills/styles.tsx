@@ -14,7 +14,7 @@ export const useStyles: any = makeStyles((theme: Theme) =>
     },
     root2: {
       marginTop: 30,
-      width: "100vw",
+      width: "60vw",
       backgroundColor: "none",
       position: "relative",
       overflow: "hidden",
