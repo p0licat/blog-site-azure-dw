@@ -12,7 +12,7 @@ export default function RootLayout(props: React.PropsWithChildren) {
     <Providers>
       <html lang="en">
         <body>
-          <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+          <AppRouterCacheProvider options={{ enableCssLayer: false }}>
             <section className={styles.container}>
               <Nav />
               {/* 

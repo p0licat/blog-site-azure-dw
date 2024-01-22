@@ -20,6 +20,7 @@ export const Counter = () => {
   const dispatch = useDispatch();
   const count = useSelector(selectCount);
   const [incrementAmount, setIncrementAmount] = useState(2);
+  const [timerProp] = useState("1");
 
   return (
     <div style={{ maxWidth: "100vw" }}>
@@ -46,6 +47,7 @@ export const Counter = () => {
             }
             modalTitle="Details"
             modalText="These card-like components will take information from my portfolio and CV and scatter them through this application. No constraint based layout algorithm is implemented though, because I didn't invest that much time in it."
+            reRenderTimerSeed={timerProp}
           />
         </motion.div>
         <motion.div
@@ -69,6 +71,7 @@ export const Counter = () => {
             fullTitle={
               "Trainee @European Investment Bank, Certified in Data Science, Cybersecurity analyst, Azure"
             }
+            reRenderTimeSeed={timerProp}
           />
         </motion.div>
         <motion.div
@@ -94,6 +97,7 @@ export const Counter = () => {
             }
             modalTitle="Details"
             modalText="Do I know any other technologies than the ones listed? Yes, I have lots of tables with detailed figures of books I read, courses I took, and things I used profesionally or not. Check some of the other pages as I update the site."
+            reRenderTimerSeed={timerProp}
           />
         </motion.div>
         <motion.div

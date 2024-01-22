@@ -23,6 +23,7 @@ export interface ProfileDetailsCardProps {
   fullTitle: string;
   fullLocation: string;
   fullEmail: string;
+  reRenderTimeSeed?: string;
 }
 
 const theme = createTheme();
@@ -30,7 +31,7 @@ const theme = createTheme();
 export function ProfileDetailsCard(props: ProfileDetailsCardProps) {
   const classes = useStyles();
   return (
-    <Card className={classes.cardStyle}>
+    <Card className={classes.cardStyle} id={props.reRenderTimeSeed}>
       <Grid container>
         <Grid item xs={4}>
           <motion.div>

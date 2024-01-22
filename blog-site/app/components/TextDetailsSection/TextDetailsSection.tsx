@@ -10,6 +10,7 @@ export interface TextDetailsSectionProps {
   headerVariant: Variant;
   modalTitle?: string;
   modalText?: string;
+  reRenderTimerSeed?: string;
 }
 
 const style = {
@@ -32,7 +33,7 @@ export function TextDetailsSection(props: TextDetailsSectionProps) {
   const handleClose = () => setOpen(false);
 
   return (
-    <Card className={classes.cardStyle}>
+    <Card className={classes.cardStyle} id={props.reRenderTimerSeed}>
       <Divider />
       <Button style={{ float: "right" }} onClick={handleOpen}>
         <HelpOutlineIcon></HelpOutlineIcon>

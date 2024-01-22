@@ -1,8 +1,10 @@
 /* Components */
 import { Counter } from "./components/Counter/Counter";
+import { LandingPage } from "./landing/page";
 
 export default function IndexPage() {
-  return <Counter />;
+  const counterPrefetch = <Counter></Counter>;
+  return <LandingPage />;
 }
 
 export const metadata = {
