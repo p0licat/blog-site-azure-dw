@@ -21,8 +21,11 @@ export const useStyles: any = makeStyles((theme: Theme) =>
       padding: 0,
     },
     profilePic: {
-      width: "200px",
-      height: "200px",
+      maxWidth: "200px",
+      maxHeight: "200px",
+      height: "auto",
+      width: "auto",
+      display: "block",
     },
   })
 );

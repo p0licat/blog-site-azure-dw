@@ -6,7 +6,7 @@ export const useStyles: any = makeStyles((theme: Theme) =>
     root: {
       marginTop: 30,
       width: "80vw",
-      backgroundColor: "pink",
+      backgroundColor: "none",
       position: "relative",
       overflow: "hidden",
       //maxHeight: 400,
