@@ -46,7 +46,7 @@ export function ListOfEvents(props: ListOfEventsProps) {
         {storeEvents.map((i: PersonalEvent) => {
           return (
             <ListItem key={i.key}>
-              <Typography variant="h6">
+              <Typography variant="subtitle1">
                 {i.date.toDateString()} | {i.description}
               </Typography>
             </ListItem>
