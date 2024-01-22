@@ -1,12 +1,8 @@
 /* Components */
 import { Counter } from "./components/Counter/Counter";
-import { LandingPage } from "./landing/page";
+import { LandingPageComponent } from "./components/LandingPageComponent/LandingPageComponent";
 
 export default function IndexPage() {
   const counterPrefetch = <Counter></Counter>;
-  return <LandingPage />;
+  return <LandingPageComponent />;
 }
-
-export const metadata = {
-  title: "Redux Toolkit",
-};
