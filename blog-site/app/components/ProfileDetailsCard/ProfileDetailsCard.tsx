@@ -6,16 +6,17 @@ import {
   Typography,
   List,
   Link,
-} from "@material-ui/core";
+  createTheme,
+} from "@mui/material";
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHub from "@mui/icons-material/GitHub";
 import YouTube from "@mui/icons-material/YouTube";
 import CastForEducationIcon from "@mui/icons-material/CastForEducation";
-import { useStyles } from "./styles";
 
 import { motion } from "framer-motion";
+import { useStyles } from "./styles";
 
 export interface ProfileDetailsCardProps {
   fullName: string;
@@ -23,6 +24,8 @@ export interface ProfileDetailsCardProps {
   fullLocation: string;
   fullEmail: string;
 }
+
+const theme = createTheme();
 
 export function ProfileDetailsCard(props: ProfileDetailsCardProps) {
   const classes = useStyles();
@@ -35,7 +38,7 @@ export function ProfileDetailsCard(props: ProfileDetailsCardProps) {
               style={{ border: "none", boxShadow: "none", overflow: "overlay" }}
             >
               <img
-                src={"/static/Profile2.jpg"}
+                src={"/static/Profile4.jpg"}
                 alt={"My avatar"}
                 className={classes.profilePic}
               ></img>

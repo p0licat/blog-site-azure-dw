@@ -1,11 +1,12 @@
-import { makeStyles, Theme, createStyles } from "@material-ui/core";
+import { Theme } from "@mui/material";
+import { createStyles, makeStyles } from "@mui/styles";
 
-export const useStyles = makeStyles((theme: Theme) =>
+export const useStyles: any = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       marginTop: 30,
       width: "80%",
-      backgroundColor: theme.palette.background.paper,
+      backgroundColor: "white",
       position: "relative",
       overflow: "auto",
       // maxHeight: 400,

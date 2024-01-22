@@ -1,4 +1,4 @@
-import { List, ListItem, Typography } from "@material-ui/core";
+import { List, ListItem, Typography, createTheme } from "@mui/material";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../../lib/redux/hooks";
 import { store } from "../../../lib/redux/store";
@@ -10,11 +10,25 @@ import {
 import { PersonalEvent } from "../../../lib/redux/slices/ListOfEventsSlice/types";
 import { useStyles } from "./styles";
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#0052cc",
+    },
+    secondary: {
+      main: "#edf2ff",
+    },
+    background: {
+      paper: "ffffff",
+    },
+  },
+});
+
 export interface ListOfEventsProps {}
 
 export function ListOfEvents(props: ListOfEventsProps) {
   const dispatch = useAppDispatch();
-  const classes = useStyles();
+  const classes = useStyles(theme);
   const storeEvents = useAppSelector(selectListOfEvents);
   const fetchStatus = useAppSelector(selectFetchStatus);
 

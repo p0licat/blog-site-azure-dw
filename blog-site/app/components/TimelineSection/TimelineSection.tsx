@@ -1,5 +1,3 @@
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
 import BuildIcon from "@mui/icons-material/Build";
 import FunctionsIcon from "@mui/icons-material/Functions";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
@@ -15,11 +13,12 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import WorkIcon from "@mui/icons-material/Work";
 import React from "react";
 import { useStyles } from "./styles";
+import { Paper, Typography, createTheme, useTheme } from "@mui/material";
 
 export interface TimelineSectionProps {}
 
 export function TimelineSection(props: TimelineSectionProps) {
-  const classes = useStyles();
+  const classes = useStyles(useTheme());
 
   return (
     <div className={classes.divRoot}>

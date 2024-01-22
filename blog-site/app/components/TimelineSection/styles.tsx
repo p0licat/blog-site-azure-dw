@@ -1,14 +1,15 @@
-import { makeStyles } from "@material-ui/core";
+import { Theme } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles: any = makeStyles((theme: Theme) => ({
   paper: {
     padding: "6px 16px",
   },
   secondaryTail: {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: "pink",
   },
   primaryTail: {
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: "blue",
   },
   timelineRoot: {
     minWidth: 1200,

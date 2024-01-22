@@ -4,7 +4,7 @@ import {
   Grid,
   ThemeProvider,
   Typography,
-} from "@material-ui/core";
+} from "@mui/material";
 import { ReadPublication } from "../../../../../app/components/ReadPublicationsSection/types/types";
 
 export interface ReadPublicationCardProps {

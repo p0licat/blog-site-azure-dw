@@ -1,3 +1,5 @@
+import TwitterIcon from "@mui/icons-material/Twitter";
+import { useStyles } from "./styles";
 import {
   Card,
   Grid,
@@ -6,9 +8,7 @@ import {
   ListItem,
   ListItemIcon,
   Typography,
-} from "@material-ui/core";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import { useStyles } from "./styles";
+} from "@mui/material";
 
 export interface ProfileDetailsCardProps {
   fullText: string;

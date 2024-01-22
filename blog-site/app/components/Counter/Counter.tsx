@@ -6,14 +6,15 @@ const theme = personalTheme();
 
 /* Instruments */
 import { selectCount, useDispatch, useSelector } from "@/lib/redux";
-import { ThemeProvider, Typography } from "@material-ui/core";
-import { TextDetailsSection } from "../TextDetailsSection/TextDetailsSection";
-import { personalTheme } from "./styles";
-import { ProfileDetailsCard } from "../ProfileDetailsCard/ProfileDetailsCard";
-import { ListOfEvents } from "../ListOfEvents/ListOfEvents";
-import { ReadPublicationsSection } from "../ReadPublicationsSection/ReadPublicationsSection";
-import { TimelineSection } from "../TimelineSection/TimelineSection";
+import { Typography } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
 import { motion } from "framer-motion";
+import { ListOfEvents } from "../ListOfEvents/ListOfEvents";
+import { ProfileDetailsCard } from "../ProfileDetailsCard/ProfileDetailsCard";
+import { ReadPublicationsSection } from "../ReadPublicationsSection/ReadPublicationsSection";
+import { TextDetailsSection } from "../TextDetailsSection/TextDetailsSection";
+import { TimelineSection } from "../TimelineSection/TimelineSection";
+import { personalTheme } from "./styles";
 
 export const Counter = () => {
   const dispatch = useDispatch();

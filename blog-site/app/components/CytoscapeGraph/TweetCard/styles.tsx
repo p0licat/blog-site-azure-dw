@@ -1,6 +1,7 @@
-import { createStyles, makeStyles, Theme } from "@material-ui/core";
+import { Theme } from "@mui/material";
+import { createStyles, makeStyles } from "@mui/styles";
 
-export const useStyles = makeStyles((theme: Theme) =>
+export const useStyles: any = makeStyles((theme: Theme) =>
   createStyles({
     cardStyle: {
       marginTop: 15,

@@ -1,4 +1,5 @@
-import createTheme from "@material-ui/core/styles/createTheme";
+import { Theme, createTheme } from "@mui/material";
+import { createStyles, makeStyles } from "@mui/styles";
 
 export const personalTheme = () => {
   const theme = createTheme({

@@ -1,12 +1,5 @@
-import {
-  Box,
-  Button,
-  Card,
-  Divider,
-  Modal,
-  Typography,
-} from "@material-ui/core";
-import { Variant } from "@material-ui/core/styles/createTypography";
+import { Box, Button, Card, Divider, Modal, Typography } from "@mui/material";
+import { Variant } from "@mui/material/styles/createTypography";
 import { useStyles } from "./styles";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { useState } from "react";
