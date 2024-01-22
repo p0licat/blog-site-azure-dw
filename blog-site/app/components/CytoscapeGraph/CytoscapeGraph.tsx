@@ -120,6 +120,30 @@ export const CytoscapeGraph = () => {
         console.log("Setter finalized.");
         //console.log(list_selected);
       });
+      cy_custom.on("tap", "node", (event) => {
+        dispatch(
+          twitterDataStoreSlice.actions.logEvent({
+            logText: "Retrieving tweet details. Action costs 1 point.",
+            eventTimeStamp: event.originalEvent.timeStamp,
+          })
+        );
+        console.log("Running handleSliderChange event handler.");
+        //console.log(event.target._private.data);
+        // console.log(
+        //   cy_custom.elements(":selected").map((e: any) => e._private.data)
+        // );
+        var list_of_selected_ids = cy_custom
+          .elements(":selected")
+          .map((e: any) => e._private.data.id);
+        list_of_selected_ids.push(event.target._private.data.id); // add current target to list of selected
+        //console.log("List selected ids: ");
+        //console.log(list_of_selected_ids);
+        // should dispatch an event
+        console.log("Calling setter.");
+        set_list_selected(list_of_selected_ids); // triggers
+        console.log("Setter finalized.");
+        //console.log(list_selected);
+      });
     }
   }
 
