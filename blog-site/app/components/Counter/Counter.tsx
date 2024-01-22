@@ -67,7 +67,7 @@ export const Counter = () => {
             fullLocation={""}
             fullName={"Bodică Septimiu-Călin"}
             fullTitle={
-              "Trainee @EIB, Certified in Data Science, Cybersecurity analyst, Azure"
+              "Trainee @European Investment Bank, Certified in Data Science, Cybersecurity analyst, Azure"
             }
           />
         </motion.div>
